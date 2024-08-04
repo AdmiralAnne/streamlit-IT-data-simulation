@@ -12,4 +12,3 @@ df
 
 # the plan - Visualize the data - create inputs to change the visualizations
 bar=st.bar_chart(data=df, x='Gender', y="Salary", x_label='Gender', y_label="Salary", color='Gender')
-bar
