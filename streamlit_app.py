@@ -20,4 +20,4 @@ st.write('you have selected: ', option)
 
 option_count = df[option].value_counts()
 option_count
-st.bar_chart(option_count, color='')
+st.bar_chart(option_count)
