@@ -16,4 +16,4 @@ female_count = df[df['Gender'] == 'F'].shape[0]
 male_count
 female_count
 
-st.bar_chart(data=df, x="male_count", y="female_count", x_label="male_count", y_label="female_count", color='Gender', horizontal=False, stack=None, width=None, height=None, use_container_width=True)
+st.bar_chart(data=df, x="male_count", y="female_count", x_label="male_count", y_label="female_count", color='Gender')
