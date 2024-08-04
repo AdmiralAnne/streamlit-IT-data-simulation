@@ -13,7 +13,7 @@ with st.expander('Raw Data'):
 # visualize the count of each variable in each column / faeture 
 option = st.selectbox(
     "Which Feature's Count value do you wanna see?",
-    ("Gender", "Experience (Years)", "Position"),
+    ('Gender', 'Experience (Years)', 'Position'),
 )
 
 st.write('you have selected: ', option)
@@ -24,5 +24,14 @@ st.bar_chart(option_count)
 with st.expander('chart data'):
     option_count
 
+# new section for salary chart
+st.subheader('Salary Variations for various Positions:')
 # Create the line chart
 st.line_chart(df, x='ID', y='Salary', color='Position')
+
+# create new dataframe for specific Job Positions
+salary_df = df[df['Position'] == 'Web Developer']
+salary_df
+# insights on position
+max_salary = salary_df['Salary'].max()
+max_salary
