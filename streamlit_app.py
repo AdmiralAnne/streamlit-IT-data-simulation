@@ -36,10 +36,13 @@ salary_df = df[df['Position'] == position]
 max_salary = salary_df['Salary'].max()
 st.write("Maximum salary data")
 df[df['Salary'] == max_salary]
+max_salary_df = df[df['Salary'] == max_salary][['Experience (Years)', 'Position', 'Salary']]
+max_salary_df
 
 min_salary = salary_df['Salary'].min()
 st.write("Minimum salary data")
 df[df['Salary'] == min_salary]
+
 
 # st.line_chart(salary_df, x='ID', y='Salary', color='Position') # not east to understand 
 st.line_chart(salary_df, x='Experience (Years)', y='Salary', color='Position') # easier to understand
