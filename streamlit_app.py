@@ -26,3 +26,4 @@ plt.xlabel("Gender")
 plt.ylabel("Count")
 plt.title("Number of Males and Females in the Dataset")
 plt.show()
+plt
