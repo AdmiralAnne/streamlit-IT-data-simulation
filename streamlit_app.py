@@ -18,5 +18,5 @@ gender_counts
 exp_counts = df['Experience (Years)'].value_counts()
 exp_counts
 
-st.bar_chart(exp_counts,color='Experience (Years)')
-st.bar_chart(gender_counts,color='Gender')
+st.bar_chart(exp_counts,color=Experience (Years))
+st.bar_chart(gender_counts,color=Gender)
