@@ -18,5 +18,13 @@ gender_counts
 exp_counts = df['Experience (Years)'].value_counts()
 exp_counts
 
-st.bar_chart(exp_counts,color='count')
-st.bar_chart(gender_counts,color='Gender')
+st.bar_chart(exp_counts)
+st.bar_chart(gender_counts)
+
+option = st.selectbox(
+    "Which Feature's Count value do you wanna see?",
+    ("'Gender'", "Experience (Years)", "Position"),
+)
+
+option_count = df[option].value_counts()
+st.bar_chart(option_count)
