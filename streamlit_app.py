@@ -24,6 +24,5 @@ st.bar_chart(option_count)
 with st.expander('chart data'):
     option_count
 
-salary=df['ID','Salary']
-salary
-st.line_chart(salary)
+# Create the line chart
+st.line_chart(df, x='ID', y='Salary')
