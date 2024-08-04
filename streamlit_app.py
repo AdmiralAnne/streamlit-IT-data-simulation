@@ -25,4 +25,4 @@ with st.expander('chart data'):
     option_count
 
 # Create the line chart
-st.line_chart(df, x='ID', y='Salary')
+st.line_chart(df, x='ID', y='Salary', color='Salary')
