@@ -29,9 +29,16 @@ st.subheader('Salary Variations for various Positions:')
 # Create the line chart
 st.line_chart(df, x='ID', y='Salary', color='Position')
 
+position = st.selectbox(
+    "Which JOB Position's stats do you wanna see?",
+    ('Web Developer', 'IT Manager', 'IT Security Analyst','Database Administrator (DBA)', 'Systems Administrator', 'DevOps Engineer', 'Systems Analyst','Software Engineer','Network Administrator','IT Support Specialist', 'Cloud Solutions Architect'),
+)
+
 # create new dataframe for specific Job Positions
-salary_df = df[df['Position'] == 'Web Developer']
+salary_df = df[df['Position'] == position]
 salary_df
 # insights on position
 max_salary = salary_df['Salary'].max()
 max_salary
+min_salary = salary_df['Salary'].min()
+min_salary
