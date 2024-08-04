@@ -21,3 +21,14 @@ st.write('you have selected: ', option)
 
 option_count = df[option].value_counts()
 st.bar_chart(option_count, color='count')
+
+st.write('you have selected: ', option)
+
+# Count occurrences
+option_count = df[option].value_counts()
+
+# Generate colors based on the number of unique values
+colors = generate_colors(len(option_count))
+
+# Create the bar chart with custom colors
+st.bar_chart(option_count, color=colors)
