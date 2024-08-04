@@ -24,11 +24,6 @@ st.bar_chart(option_count)
 with st.expander('chart data'):
     option_count
 
-# new section for salary chart
-st.subheader('Salary Variations for various Positions:')
-# Create the line chart
-st.line_chart(df, x='ID', y='Salary', color='Position')
-
 position = st.selectbox(
     "Which JOB Position's stats do you wanna see?",
     ('Web Developer', 'IT Manager', 'IT Security Analyst','Database Administrator (DBA)', 'Systems Administrator', 'DevOps Engineer', 'Systems Analyst','Software Engineer','Network Administrator','IT Support Specialist', 'Cloud Solutions Architect'),
@@ -46,8 +41,14 @@ min_salary = salary_df['Salary'].min()
 st.write("Minimum salary data")
 df[df['Salary'] == min_salary]
 
-st.line_chart(salary_df, x='ID', y='Salary', color='Position')
-st.line_chart(salary_df, x='Experience (Years)', y='Salary', color='Position')
+# st.line_chart(salary_df, x='ID', y='Salary', color='Position') # not east to understand 
+st.line_chart(salary_df, x='Experience (Years)', y='Salary', color='Position') # easier to understand
 
 with st.expander('Position data frame'):
     salary_df
+
+
+# new section for salary chart - for all Positions
+st.subheader('Salary Variations for various Positions:')
+# Create the line chart
+st.line_chart(df, x='ID', y='Salary', color='Position')
