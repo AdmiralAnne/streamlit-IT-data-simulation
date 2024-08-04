@@ -19,3 +19,4 @@ exp_counts = df['Experience (Years)'].value_counts()
 exp_counts
 
 st.bar_chart(exp_counts)
+st.bar_chart(gender_counts)
