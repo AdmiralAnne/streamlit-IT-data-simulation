@@ -39,8 +39,9 @@ salary_df = df[df['Position'] == position]
 salary_df
 # insights on position
 max_salary = salary_df['Salary'].max()
-st.write("Maximum salary:", max_salary)
-experience = df[df['Salary'] == max_salary]
-experience
+st.write("Maximum salary data")
+df[df['Salary'] == max_salary]
+
 min_salary = salary_df['Salary'].min()
-st.write("Minimum salary:", min_salary)
+st.write("Minimum salary data")
+df[df['Salary'] == min_salary]
