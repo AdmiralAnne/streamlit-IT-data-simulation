@@ -1,5 +1,12 @@
 import streamlit as st
+import pandas as pd
+import numpy as np
+from matplotlib.pyplot import plotly
 
-st.title('🎈 App Name')
+st.title('📈 IT Data Simulation')
 
-st.write('Hello world!')
+st.info('Salary for various IT Positions - configure using custom inputs that suit your needs.')
+
+#import and view data
+df = pd.read_csv('employee.csv')
+df
