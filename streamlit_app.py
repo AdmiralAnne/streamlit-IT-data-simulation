@@ -36,7 +36,7 @@ position = st.selectbox(
 
 # create new dataframe for specific Job Positions
 salary_df = df[df['Position'] == position]
-salary_df
+
 # insights on position
 max_salary = salary_df['Salary'].max()
 st.write("Maximum salary data")
@@ -47,3 +47,7 @@ st.write("Minimum salary data")
 df[df['Salary'] == min_salary]
 
 st.line_chart(salary_df, x='ID', y='Salary', color='Position')
+st.line_chart(salary_df, x='Experience (Years)', y='Salary', color='Position')
+
+with st.expander('Position data frame'):
+    salary_df
