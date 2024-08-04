@@ -20,4 +20,4 @@ option = st.selectbox(
 st.write('you have selected: ', option)
 
 option_count = df[option].value_counts()
-st.bar_chart(option_count, color=["#fd0", "#f0f", "#04f"]')
+st.bar_chart(option_count, color=["#fd0", "#f0f", "#04f"])
