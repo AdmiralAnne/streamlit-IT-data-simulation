@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 st.title('📈 IT Data Simulation')
 
@@ -16,4 +17,12 @@ female_count = df[df['Gender'] == 'F'].shape[0]
 male_count
 female_count
 
-st.bar_chart(data=df, x=male_count, y=female_count, x_label="male_count", y_label="female_count", color='Gender')
+# Count the number of males and females
+gender_counts = df['Gender'].value_counts()
+
+# Create a bar chart
+plt.bar(gender_counts.index, gender_counts.values)
+plt.xlabel("Gender")
+plt.ylabel("Count")
+plt.title("Number of Males and Females in the Dataset")
+plt.show()
