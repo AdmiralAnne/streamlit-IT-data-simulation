@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import pygwalker as pyg
 
 st.title('📈 IT Data Simulation')
 
@@ -15,3 +16,5 @@ female_count = df[df['Gender'] == 'F'].shape[0]
 
 male_count
 female_count
+
+walker = pyg.walk(df)
