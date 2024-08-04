@@ -10,21 +10,13 @@ st.info('Salary for various IT Positions - configure using custom inputs that su
 #import and view data
 df = pd.read_csv('employee.csv')
 df
-
-# Count the number of males and females
-gender_counts = df['Gender'].value_counts()
-gender_counts
-
-exp_counts = df['Experience (Years)'].value_counts()
-exp_counts
-
-st.bar_chart(exp_counts)
-st.bar_chart(gender_counts)
-
+# visualize the count of each variable in each column / faeture 
 option = st.selectbox(
     "Which Feature's Count value do you wanna see?",
     ("Gender", "Experience (Years)", "Position"),
 )
+
+st.write('you have selected: ', option)
 
 option_count = df[option].value_counts()
 st.bar_chart(option_count)
