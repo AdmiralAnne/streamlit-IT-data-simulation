@@ -16,7 +16,7 @@ option = st.selectbox(
     ('Gender', 'Experience (Years)', 'Position'),
 )
 
-st.write('you have selected: ', option)
+# st.write('you have selected: ', option) # not needed at the moment
 
 option_count = df[option].value_counts()
 st.bar_chart(option_count)
@@ -45,3 +45,5 @@ df[df['Salary'] == max_salary]
 min_salary = salary_df['Salary'].min()
 st.write("Minimum salary data")
 df[df['Salary'] == min_salary]
+
+st.line_chart(salary_df, x='ID', y='Salary', color='Position')
