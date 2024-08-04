@@ -17,4 +17,4 @@ female_count = df[df['Gender'] == 'F'].shape[0]
 male_count
 female_count
 
-walker = pyg.walk(df)
+pyg.walk(df)
