@@ -23,7 +23,7 @@ st.bar_chart(gender_counts)
 
 option = st.selectbox(
     "Which Feature's Count value do you wanna see?",
-    ("Gender'", "Experience (Years)", "Position"),
+    ("Gender", "Experience (Years)", "Position"),
 )
 
 option_count = df[option].value_counts()
