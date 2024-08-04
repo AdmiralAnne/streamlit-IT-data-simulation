@@ -25,5 +25,5 @@ plt.bar(gender_counts.index, gender_counts.values)
 plt.xlabel("Gender")
 plt.ylabel("Count")
 plt.title("Number of Males and Females in the Dataset")
-plt.show()
-plt
+bar=plt.show()
+bar
