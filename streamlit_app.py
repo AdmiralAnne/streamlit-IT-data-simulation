@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from matplotlib.pyplot import plotly
 
 st.title('📈 IT Data Simulation')
 
