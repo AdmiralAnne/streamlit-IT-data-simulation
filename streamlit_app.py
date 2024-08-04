@@ -6,10 +6,11 @@ import matplotlib.pyplot as plt
 st.title('📈 IT Data Simulation')
 
 st.info('Salary for various IT Positions - configure using custom inputs that suit your needs.')
+with st.expander('Raw Data'):
+    #import and view data
+    df = pd.read_csv('employee.csv')
+    df
 
-#import and view data
-df = pd.read_csv('employee.csv')
-df
 # visualize the count of each variable in each column / faeture 
 option = st.selectbox(
     "Which Feature's Count value do you wanna see?",
