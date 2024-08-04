@@ -9,3 +9,7 @@ st.info('Salary for various IT Positions - configure using custom inputs that su
 #import and view data
 df = pd.read_csv('employee.csv')
 df
+
+# the plan - Visualize the data - create inputs to change the visualizations
+bar=st.bar_chart(data=df, x='Gender', y="Salary", x_label='Gender', y_label="Salary", color='Gender')
+bar
