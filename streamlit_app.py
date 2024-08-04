@@ -14,3 +14,6 @@ df
 # Count the number of males and females
 gender_counts = df['Gender'].value_counts()
 gender_counts
+
+exp_counts = df['Experience (Years)'].value_counts()
+exp_counts
